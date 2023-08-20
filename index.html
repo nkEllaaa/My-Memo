@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>나만의 메모장</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <h1><a href="#">J 따라잡기</a></h1>
+      </header>
+      <div class="l-wrap">
+        <section>
+          <input
+            type="text"
+            id="memotitle"
+            maxlength="23"
+            class="memo-title"
+            placeholder="할 일"
+            required
+          />
+          <textarea
+            id="memo"
+            class="memo-text"
+            maxlength="144"
+            placeholder="자세한 내용"
+          ></textarea>
+          <div class="button-wrap">
+            <button id="memosubmit" class="btn-save" type="button">
+              메모 저장
+            </button>
+            <button id="memosubmit" class="btn-delete" type="button">
+              전체 삭제
+            </button>
+          </div>
+        </section>
+        <div class="listWrap">
+          <ul class="memolists"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

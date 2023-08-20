@@ -1,0 +1,197 @@
+body,
+h1,
+div,
+button,
+ul,
+li,
+input,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button {
+  border: none;
+  background-color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: bisque;
+}
+
+.l-wrap {
+  display: flex;
+}
+
+header {
+  padding: 40px 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(224, 112, 93);
+}
+
+h1,
+button {
+  font-family: "Gugi", cursive;
+}
+
+h1 {
+  font-size: 50px;
+  margin-left: 16px;
+}
+
+section {
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.memo-title,
+.memo-text {
+  min-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.memo-title {
+  padding: 10px 16px;
+  font-size: 2rem;
+}
+
+.memo-text {
+  display: block;
+  width: 100%;
+  height: 360px;
+  resize: none;
+  padding: 16px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 1.7rem;
+}
+
+.button-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-save,
+.btn-delete {
+  width: 100%;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px 0;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.btn-save {
+  background-color: rgb(224, 112, 93);
+}
+
+.btn-save:hover {
+  background-color: #ffc53d;
+}
+
+.btn-delete {
+  background-color: #36663b
+}
+
+.btn-delete:hover {
+  background-color: #21a52f;
+}
+
+.listWrap {
+  margin: 0 20px;
+  width: 100%;
+  height: 200px;
+}
+
+.memolists {
+  background-color: #fff;
+  height: 490px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.9rem;
+  overflow: auto;
+}
+
+li {
+  width: calc(50% - 40px);
+  min-height: 200px;
+  box-sizing: border-box;
+  margin: 20px 20px 20px 20px;
+  padding: 20px;
+  background-color: #dda96a;
+  position: relative;
+}
+
+li:first-child,
+li:nth-child(2) {
+  margin-top: 30px;
+}
+
+li::after {
+  content: url("./img/pin_resize.png");
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+}
+
+p {
+  margin: 5px 0;
+}
+
+li button {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 5px;
+  width: 60px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+li button:hover {
+  border: 2px solid #dbdbdb;
+transform: scale(1.1);
+}
+
+li button:active {
+  border: 3px solid #dbdbdb;
+  box-shadow: 3px 3px 0 0 rgb(156, 155, 155);
+}
+
+@media screen and (max-width: 1050px) {
+  .l-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    max-width: 90%;
+    margin-left: 0;
+  }
+  .memolist ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .memolists li {
+    margin: 10px auto;
+    width: 90%;
+  }
+}
